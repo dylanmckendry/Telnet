@@ -23,7 +23,7 @@ namespace PrimS.Telnet
             this.tcpSocket = new TcpClient();
 
             var asyncResult = this.tcpSocket.BeginConnect(hostname, port, null, null);
-            var success = asyncResult.AsyncWaitHandle.WaitOne(TimeSpan.FromSeconds(1));
+            var success = asyncResult.AsyncWaitHandle.WaitOne(TimeSpan.FromSeconds(3));
 
             if (!success)
             {

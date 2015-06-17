@@ -1,30 +1,36 @@
-<?xml version="1.0"?>
-<package >
-  <metadata>
-    <id>Telnet</id>
-    <version>0.2.7</version>
-    <title>Telnet</title>
-    <authors>Telnet contributors</authors>
-    <owners>9swampy</owners>
-    <licenseUrl>https://github.com/9swampy/Telnet/blob/master/License.txt</licenseUrl>
-    <projectUrl>https://github.com/9swampy/Telnet/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/9swampy/Telnet/master/Ptelnet128x600.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>A minimal C# 4.0/4.5 Telnet client library implementation, just enough to send simple text commands from your application, retrieve the response for parsing and react appropriately.</description>
-    <releaseNotes>
-    Add Client.ctor overload to accept IByteStream facilitating better testing.
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>Telnet.Heos</id>
+        <version>0.3.0</version>
+        <title>Telnet</title>
+        <authors>Telnet contributors</authors>
+        <owners>9swampy</owners>
+        <licenseUrl>https://github.com/9swampy/Telnet/blob/master/License.txt</licenseUrl>
+        <projectUrl>https://github.com/9swampy/Telnet/</projectUrl>
+        <iconUrl>https://raw.githubusercontent.com/9swampy/Telnet/master/Ptelnet128x600.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A minimal C# 4.0/4.5 Telnet client library implementation, just enough to send simple text commands from your application, retrieve the response for parsing and react appropriately.</description>
+        <releaseNotes>Add Client.ctor overload to accept IByteStream facilitating better testing.
     Adding tests to cover minor TerminatedReadAsync bug fixed in 0.2.6.
     Minor bug fix in TerminatedReadAsync's debug output.
-    Add overload on IByteStream.Write to accept a simple string.
-    </releaseNotes>
-    <copyright>Copyright (c) 9swampy, Telnet contributors</copyright>
-    <tags>Telnet</tags>
-  </metadata>
-  <files>
-    <file src="License.txt" target="content" />
-    <file src="PrimS.Telnet\Bin\Release\PrimS.Telnet.dll" target="lib\net45" />
-    <file src="PrimS.Telnet\Bin\Release\PrimS.Telnet.xml" target="lib\net45" />
-    <file src="PrimS.Telnet.40\Bin\Release\PrimS.Telnet.40.dll" target="lib\net40" />
-    <file src="PrimS.Telnet.40\Bin\Release\PrimS.Telnet.40.xml" target="lib\net40" />
-  </files>
+    Add overload on IByteStream.Write to accept a simple string.</releaseNotes>
+        <copyright>Copyright (c) 9swampy, Telnet contributors</copyright>
+        <tags>Telnet</tags>
+        <dependencies>
+            <group targetFramework=".NETFramework4.0">
+                <dependency id="LiteGuard" version="0.10.0" />
+            </group>
+            <group targetFramework=".NETFramework4.5">
+                <dependency id="LiteGuard" version="0.10.0" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="License.txt" target="content\License.txt" />
+        <file src="PrimS.Telnet.40\Bin\Release\PrimS.Telnet.40.dll" target="lib\net40\PrimS.Telnet.40.dll" />
+        <file src="PrimS.Telnet.40\Bin\Release\PrimS.Telnet.40.xml" target="lib\net40\PrimS.Telnet.40.xml" />
+        <file src="PrimS.Telnet\Bin\Release\PrimS.Telnet.dll" target="lib\net45\PrimS.Telnet.dll" />
+        <file src="PrimS.Telnet\Bin\Release\PrimS.Telnet.XML" target="lib\net45\PrimS.Telnet.XML" />
+    </files>
 </package>
