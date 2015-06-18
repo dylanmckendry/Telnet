@@ -1,5 +1,3 @@
-using System.Net.Sockets;
-
 namespace PrimS.Telnet
 {
     using System;
@@ -54,7 +52,7 @@ namespace PrimS.Telnet
         {
             if (!this.byteStream.Connected || this.internalCancellation.Token.IsCancellationRequested)
             {
-                throw new Exception("Test 1");
+                return string.Empty;
             }
 
             StringBuilder sb = new StringBuilder();
@@ -75,7 +73,6 @@ namespace PrimS.Telnet
                                                                                                     IsWaitForIncrementalResponse(rollingTimeout)));
             if (DateTime.Now >= rollingTimeout)
             {
-                throw new Exception("Test 2");
                 System.Diagnostics.Debug.Print("RollingTimeout exceeded {0}", DateTime.Now.ToString("ss:fff"));
             }
 
