@@ -20,6 +20,7 @@ namespace PrimS.Telnet
         /// <param name="port">The port.</param>
         public TcpByteStream(string hostname, int port)
         {
+            // HACK: timeout should be passed in.
             this.tcpSocket = new TcpClient();
 
             var asyncResult = this.tcpSocket.BeginConnect(hostname, port, null, null);
